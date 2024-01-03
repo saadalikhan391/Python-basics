@@ -9,12 +9,12 @@
 # for variable in <collection>:
 #  loop body 
 
-str = "looping"
+str1 = "looping"
 
-for item in str :    #item variable, str is sequence this for loop will iterate the data
+for item in str1 :    #item variable, str is sequence this for loop will iterate the data
     print(item)  
 
-print(str[1])
+print(str1[1])
 
 #Q1) what is the purpose of for loop
 #A) a for loop in python is used to iterrate over sequence of items such as list, string or range
@@ -80,3 +80,9 @@ print(nameWithB)
 
 # numbers = [i for i in range(10)]
 # print(numbers)
+
+
+items =["name1","python","html","java"]
+
+for index, item in enumerate(items):
+    print(index,item)
