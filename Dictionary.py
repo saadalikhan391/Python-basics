@@ -77,3 +77,8 @@ print('England' in country_capital)
 
 country_capital.pop("United States")
 print(country_capital)
+
+my_id ={1:'Test','Name':'Jim'}
+
+for key, value in my_id.items():
+    print(str(key) + " : " + value)
