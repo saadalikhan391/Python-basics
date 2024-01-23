@@ -11,16 +11,17 @@ my_global = 10
 
 def fn1():
     enclosed_v = 8
-   
+    print("this is enclosed",enclosed_v)
     def fn2():
         local_v = 5
         print('Access to Global', my_global)
-        print('Access to enclosed', enclosed_v)
+        print('Access to enclosed', local_v)
     fn2()
-fn1()
+fn1()  
 
 
-#remove fn1 fn2
+
+# #remove fn1 fn2
 # print(enclosed_v)
 # print(local_v)
 
@@ -34,15 +35,15 @@ fn1()
 
 def get_total(a, b):
     #local variable declared inside a function
-    total = a + b;
+    total = a + b
     return total
 
 print(get_total(5, 2))
-7
+# 7
 
 # Accessing variable outside of the function:
-print(total)
-NameError: name 'total' is not defined
+# print(total)
+# NameError: name 'total' is not defined
 
 # 2. Enclosing scope
 # Enclosing scope refers to a function inside another function or what is commonly called a nested function. 
@@ -63,10 +64,26 @@ def get_total(a, b):
 
     double_it()
     #double variable will not be accessible
-    print(double)
+    # print(double)
 
     return total
+get_total(2,3)
 
+
+# Enclosing Scope in Python
+def red():
+    a=1
+    def blue():
+        b=2
+        print(a)
+        print(b)
+    blue()
+    print(a)
+red()
+
+# In this code, ‘b’ has local scope in Python function ‘blue’, and ‘a’ has nonlocal scope in ‘blue’.
+
+# Of course, a python variable scope that isn’t global or local is nonlocal. This is also called the enclosing scope.
 # 3. Global scope
 # Global scope is when a variable is declared outside of a function. This means it can be accessed from anywhere. 
 

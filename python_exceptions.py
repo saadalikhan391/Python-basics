@@ -10,6 +10,11 @@ try:
 # except Exception as e:
 #      print("something went wrong! with code ask learn with khan to fix!!!",e)
 #      print(e.__class__)
+# finally:
+#    result =  1
+
+# print(result)
+
 
 except ZeroDivisionError as e:
     print(e,"we cannot divide by zero contact learn with khan page to solve")
@@ -43,7 +48,8 @@ except:
 
 
 # #FileNotFoundError
-
+# with open('file_does_not_exist.txt', 'r') as file:
+#      print(file.read())
 try:
      with open('file_does_not_exist.txt', 'r') as file:
          print(file.read())
